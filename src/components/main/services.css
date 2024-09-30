@@ -1,0 +1,80 @@
+@import url(/src/styles/variables.css);
+@import url(/src/styles/fonts.css);
+
+
+.services__content{
+    padding-top: 138px;
+}
+
+.services__wrapper-title{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.services__title{
+    border-radius: 7px;
+    padding: 0px 7px;
+    font-weight: 500;
+    font-size: 40px;
+    background-color: var(--color-green);
+}
+
+.services__description{
+    font-size: 18px;
+    width: 580px;
+    line-height: 120%;
+}
+
+.services__cards{
+    padding-top: 80px;
+}
+
+.services__card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--color-dark);
+    border-radius: 45px;
+    padding: 50px;
+    box-shadow: 0 5px 0 0 var(--color-dark);
+    width: 600px;
+    height: 310px;
+    /* Псевдокласс для разделения свойств карточек
+    Если одинаковые классы, можно обращаться к какому-то определенному. Например чтобы обратиться ко второму - ставим значение 2. В данном случае одинаковые свойства можно объеденить следующим образом:*/
+    &:nth-child(1),
+    &:nth-child(4){
+        background: var(--color-grey);
+    }
+    &:nth-child(2),
+    &:nth-child(5){
+        background: var(--color-green);
+    }
+    &:nth-child(3),
+    &:nth-child(6){
+        background: var(--color-dark);
+    }
+}
+
+.services__card-title{
+    font-weight: 500;
+    font-size: 30px;
+    border-radius: 7px;
+    padding: 0px 7px;
+    background: var(--color-green);
+    width: fit-content;
+}
+
+.services__block-left{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.services__card-button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}

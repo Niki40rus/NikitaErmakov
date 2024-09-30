@@ -1,0 +1,15 @@
+@import url('fonts.css');
+@import url(../components/footer.css);
+@import url(../components/main.css);
+@import url(../components/header.css);
+
+*{
+    /* Шрифт для всех элементов */
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+}
+
+.content{
+    width: 85%;
+    margin: 0 auto;
+}

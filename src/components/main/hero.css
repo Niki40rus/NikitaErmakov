@@ -1,0 +1,46 @@
+@import url(/src/styles/variables.css);
+@import url(/src/styles/fonts.css);
+
+.hero__content{
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__block-left{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.hero__title{
+    width: 531px;
+    font-size: 60px;
+    /* Задаем толщину шрифта (делаем жирным) */
+    font-weight: 500;
+}
+
+.hero__text{
+    width: 498px;
+    font-size: 20px;
+    /* Задаем межстрочный интервал */
+    line-height: 140%;
+}
+
+.hero__button{
+    border: none;
+    border-radius: 14px;
+    padding: 20px 35px;
+    width: fit-content;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+    &:hover{
+        background-color: var(--color-green);
+        color:var(--color-black);
+    }
+    &:active{
+        background-color: transparent;
+    }
+}
+
