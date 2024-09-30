@@ -1,80 +1,155 @@
 @import url(/src/styles/variables.css);
 @import url(/src/styles/fonts.css);
 
-
-.services__content{
-    padding-top: 138px;
+.services__content {
+  padding-top: 138px;
 }
 
-.services__wrapper-title{
-    display: flex;
-    gap: 40px;
-    align-items: center;
+.services__wrapper-title {
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
-.services__title{
-    border-radius: 7px;
-    padding: 0px 7px;
-    font-weight: 500;
-    font-size: 40px;
-    background-color: var(--color-green);
+.services__title {
+  border-radius: 7px;
+  padding: 0px 7px;
+  font-weight: 500;
+  font-size: 40px;
+  background-color: var(--color-green);
 }
 
-.services__description{
-    font-size: 18px;
-    width: 580px;
-    line-height: 120%;
+.services__description {
+  font-size: 18px;
+  width: 580px;
+  line-height: 120%;
 }
 
-.services__cards{
-    padding-top: 80px;
+.services__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding-top: 80px;
 }
+  /* grid-template-columns: Это свойство CSS, которое используется в Grid Layout для определения количества и размеров столбцов в сетке.
+  repeat(2, 1fr): Это функция, которая позволяет указать, что вы хотите создать два столбца одинаковой ширины.
+  2: количество повторений.
+  1fr: это единица измерения, которая обозначает "долю свободного пространства". То есть, каждый столбец будет занимать равную часть доступного пространства.
+  Таким образом, с помощью grid-template-columns: repeat(2, 1fr); мы создаем два столбца, которые равномерно распределяют доступное пространство между собой.  */
 
-.services__card{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid var(--color-dark);
-    border-radius: 45px;
-    padding: 50px;
-    box-shadow: 0 5px 0 0 var(--color-dark);
-    width: 600px;
-    height: 310px;
-    /* Псевдокласс для разделения свойств карточек
+.services__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--color-dark);
+  border-radius: 45px;
+  padding: 50px;
+  box-shadow: 0 5px 0 0 var(--color-dark);
+  height: 310px;
+  /* Псевдокласс для разделения свойств карточек
     Если одинаковые классы, можно обращаться к какому-то определенному. Например чтобы обратиться ко второму - ставим значение 2. В данном случае одинаковые свойства можно объеденить следующим образом:*/
-    &:nth-child(1),
-    &:nth-child(4){
-        background: var(--color-grey);
-    }
-    &:nth-child(2),
-    &:nth-child(5){
-        background: var(--color-green);
-    }
-    &:nth-child(3),
-    &:nth-child(6){
-        background: var(--color-dark);
-    }
-}
-
-.services__card-title{
-    font-weight: 500;
-    font-size: 30px;
-    border-radius: 7px;
-    padding: 0px 7px;
+  &:nth-child(1),
+  &:nth-child(4) {
+    background: var(--color-grey);
+  }
+  &:nth-child(2),
+  &:nth-child(5) {
     background: var(--color-green);
-    width: fit-content;
+  }
+  &:nth-child(3),
+  &:nth-child(6) {
+    background: var(--color-dark);
+  }
+  /* Цвет тайлов карточек */
+  &:nth-child(1),
+  &:nth-child(4),
+  &:nth-child(6) {
+    .services__card-title {
+      &:nth-child(1),
+      &:nth-child(2) {
+        background: var(--color-green);
+      }
+    }
+  }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5) {
+      .services__card-title {
+        &:nth-child(1),
+        &:nth-child(2) {
+          background: var(--color-white);
+        }
+      }
+    }
 }
 
-.services__block-left{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
+.services__card-title {
+  font-weight: 500;
+  font-size: 30px;
+  border-radius: 7px;
+  padding: 0px 7px;
+  width: fit-content;
 }
 
-.services__card-button{
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    text-align: left;
+.services__block-left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.services__card-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.help-business{
+  position: relative;
+  /* relative Скопировать ссылку "relative"
+  Элемент позиционируется так же, как и статичный, но его отображение может быть смещено относительно своего начального положения при помощи свойств left, right, top, bottom или inset. Это смещение чисто визуальное и не затрагивает положение соседних элементов, кроме случая, когда элемент выходит за границы родителя, имеющего возможность прокрутки.
+
+  На странице элемент будет занимать столько же места, как если бы он имел статичное позиционирование. */
+  display: flex;
+  margin-top: 123.5px;
+  background: var(--color-grey);
+  width: 100%;
+  border-radius: 45px;
+  padding: 60px 0px 60px 60px;
+}
+
+.help-business__content{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 500px;
+}
+
+.help-business__title{
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.help-business__text{
+  font-size: 18px;
+}
+
+.help-business__button{
+  border-radius: 14px;
+  padding: 20px 35px;
+  width: fit-content;
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.help-business__img{
+  position: absolute;
+  /* Абсолютное позиционирование:
+  Элемент с position: absolute; выходит из нормального потока документа, что значит, что он не влияет на положение других элементов.
+  Позиционируется относительно ближайшего предка, у которого установлен position: relative;, absolute;, fixed; или sticky;. Если таких предков нет, то элемент будет позиционироваться относительно окна браузера.
+  Смещение:
+  Вы можете задать положение элемента с помощью свойств top, right, bottom и left. Эти свойства указывают смещение относительно границ родительского элемента. */
+  right: 0;
+  top: -23px;
 }

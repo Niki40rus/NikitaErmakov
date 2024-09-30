@@ -1,0 +1,67 @@
+@import url(/src/styles/variables.css);
+@import url(/src/styles/fonts.css);
+
+.cs__content {
+  padding-top: 140px;
+}
+
+.cs__wrapper-title {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.cs__title {
+  border-radius: 7px;
+  padding: 0px 7px;
+  font-weight: 500;
+  font-size: 40px;
+  background-color: var(--color-green);
+}
+
+.cs__description {
+  font-size: 18px;
+  width: 580px;
+  line-height: 120%;
+}
+
+.cs__promotion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80px;
+  width: 100%;
+  border-radius: 45px;
+  padding: 70px 60px;
+  background: var(--color-dark);
+}
+
+.cs__promotion-info{
+    &:nth-child(1){
+        padding-right: 64px;
+        border-right: 1px solid #fff;
+    }
+    &:nth-child(2){
+        padding: 0 64px 0;
+        border-right: 1px solid #fff;
+    }
+    &:nth-child(3){
+        padding-left: 64px;
+    }
+}
+
+.cs__promotion-text{
+    font-size: 18px;
+    color: var(--color-white);
+}
+
+.cs__promotion-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: var(--color-green);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
